@@ -23,6 +23,29 @@ class BooksController {
 
     res.status(statusCodes.OK).json(book);
   }
+
+  public create = async (req: Request, res: Response) => {
+    const book = req.body;
+
+    const bookCreated = await this.bookService.create(book);
+    res.status(statusCodes.CREATED).json(bookCreated);
+  };
+
+  public update = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    const book = req.body;
+    await this.bookService.update(id, book);
+
+    res.status(statusCodes.NO_CONTENT).end();
+  };
+
+  public remove = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    await this.bookService.remove(id);
+
+    res.status(statusCodes.OK).json({ message: 'Book deleted successfully' });
+  };
+
 }
 
 export default BooksController;
