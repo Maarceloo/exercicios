@@ -1,0 +1,2 @@
+ use("test")
+db.superhero.find({"aspects.hairColor": {$nin: ['black', 'No Hair']}}).count()
