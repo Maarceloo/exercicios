@@ -1,0 +1,2 @@
+ use("test")
+db.superhero.find({"aspects.height": {$lte: 180}}).count()
