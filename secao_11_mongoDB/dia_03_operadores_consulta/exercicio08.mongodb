@@ -1,0 +1,4 @@
+use("cinema")
+db.movies.find(
+    {ratings: {$size: 4}}
+)
