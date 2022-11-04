@@ -1,2 +1,2 @@
  use("test")
-db.superhero.countDocuments()
+db.superhero.find({"aspects.height": {$lt: 180}})
