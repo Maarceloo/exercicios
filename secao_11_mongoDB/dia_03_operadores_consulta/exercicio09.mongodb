@@ -1,9 +1,9 @@
-use("cinema")
-db.movies.find(
-    {
-        $and: [
-            {ratings: {$size: 4}}
-            , {category: {$elemMatch: {"adventure", "family"}}}
-        ]
-    }
-)
+// use("cinema")
+// db.movies.find(
+//     {
+//         $and: [
+//             {ratings: {$size: 4}}
+//             , {category: {$elemMatch: {"adventure", "family"}}}
+//         ]
+//     }
+// )
