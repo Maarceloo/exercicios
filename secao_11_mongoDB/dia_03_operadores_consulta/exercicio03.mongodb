@@ -1,0 +1,5 @@
+use("cinema")
+db.movies.find(
+    {ratings: {$gt: 100}}
+    ,
+    {_id: 0, category: 0, imdbRating: 0, budget: 0, description: 0})
