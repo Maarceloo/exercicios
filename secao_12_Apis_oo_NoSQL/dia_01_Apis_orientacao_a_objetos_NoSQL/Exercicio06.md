@@ -1,0 +1,1 @@
+<!-- Ainda na aplicação TRIX, crie um novo endpoint que deve retornar todas as transferências de uma determinada chave (key) -->
